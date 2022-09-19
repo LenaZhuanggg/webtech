@@ -1,0 +1,148 @@
+/* h1 {color:brown;} */
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Righteous', serif;
+    font-size: 20px;
+}
+
+#wrapper {
+    margin: auto;
+    width: 1200px;
+}
+
+
+
+#nav,
+#content,
+#supporting {
+    margin-top: 200px;
+}
+
+/* #nav,#content,#supporting,#banner {
+    padding: 10px; (其他東西會擠壓掉)
+} */
+
+.container {
+    padding: 10px;
+}
+
+#banner {
+    width: 1200px;
+    height: 200px;
+    background-color: royalblue;
+    color: white;
+    position: fixed;
+}
+
+#nav {
+    width: 200px;
+    height: 300px;
+    background-color: beige;
+    float: left;
+    position: fixed;
+}
+
+#content {
+    width: 800px;
+    float: left;
+    margin-left: 200px;
+}
+
+#supporting {
+    width: 200px;
+    height: 500px;
+    background-color: aliceblue;
+    position: fixed;
+    margin-left: 1000px;
+}
+
+#footer {
+    background-color: grey;
+    color: white;
+    clear: both;
+}
+
+#about,
+#education,
+#experience,
+#courses,
+#publication {
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+#nav li {
+    display: block;
+    background-color: coral;
+    padding: 4px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px rgb(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+#nav ul {
+    padding-left: 0px;
+}
+
+#nav li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav li a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav li:hover {
+    background-color: plum;
+}
+
+.gallery {
+    margin: 5px;
+    /* border: 1px solid #ccc; */
+    float: left;
+    width: 180px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.gallery img:hover {
+    border: 1px solid black;
+}
+
+.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.enjoy-css {
+    color: #777;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    cursor: pointer;
+    border: none;
+    font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+    color: #777;
+    text-align: center;
+    -o-text-overflow: clip;
+    text-overflow: clip;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1), 0 2px 0 rgba(255, 255, 255, 1), 0 3px 0 rgba(255, 255, 255, 1), 0 4px 0 rgba(255, 255, 255, 1), 0 5px 0 rgba(255, 255, 255, 1), 0 6px 1px rgba(0, 0, 0, 0.0980392), 0 0 5px rgba(0, 0, 0, 0.0980392), 0 1px 3px rgba(0, 0, 0, 0.298039), 0 3px 5px rgba(0, 0, 0, 0.2), 0 -5px 10px rgba(0, 0, 0, 0.247059), 0 -7px 10px rgba(0, 0, 0, 0.2), 0 -15px 20px rgba(0, 0, 0, 0.14902);
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
