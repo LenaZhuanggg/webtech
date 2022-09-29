@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/as2.css">
+
+    <title>LenaZhuang_Website</title>
+</head>
+
+<body>
+
+    <style>
+        .navbar {
+            background-color: rgb(255, 255, 255);
+            margin-top: 4vh;
+            border-radius: 32px;
+            margin-left: 10vh;
+            margin-right: 10vh;
+            box-shadow:
+                -10px 0 10px 3px rgba(232, 232, 232, 0.5),
+                10px 0 10px 3px rgba(232, 232, 232, 0.5),
+                0 10px 10px 3px rgba(232, 232, 232, 0.5),
+                0 -10px 10px 3px rgba(232, 232, 232, 0.5);
+        }
+
+        .navbar-brand {
+            margin-left: 4vh;
+            color: #21081a;
+            font-weight: 700;
+        }
+
+        .nav-item {
+            margin-right: 2vh;
+        }
+
+        .navbar-nav {
+            float: right;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .name {
+            color: black;
+            font-weight: 700;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 4vh;
+        }
+
+        .school,
+        .position {
+            color: rgb(105, 99, 99);
+            font-weight: 700;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 1vh;
+        }
+
+        #work {
+            margin-top: 2vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            margin: 5vh;
+            transition: transform .5s;
+        }
+
+        .card:hover {
+            /* border: #676566 solid 0.2vh; */
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            height: auto;
+            max-width: 100%;
+        }
+
+        .card-body {
+            height: 20vh;
+        }
+
+        .card-group {
+            margin-left: 8vh;
+            margin-right: 8vh;
+            margin-top: 8vh;
+        }
+
+        .card-text {
+            color: rgb(73, 68, 68);
+        }
+
+        .card-title {
+            color: black;
+            font-weight: 600;
+        }
+
+        .tag {
+            border-radius: 16px;
+            padding: 8px;
+            padding-left: 12px;
+            padding-right: 12px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(79, 77, 82);
+            display: inline-block;
+            margin: 5px;
+            font-size: small;
+        }
+
+        .mytag {
+            padding: 0px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .dot1,
+        .dot2,
+        .dot3 {
+            text-align: center;
+            color: #524f51c1;
+        }
+
+        .dot2 {
+            color: #686767bb;
+        }
+
+        .dot3 {
+            color: #848383b6;
+        }
+
+        .dot {
+            margin-top: 6vh;
+        }
+    </style>
+
+    <div id="wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="as2-2.html">Lena Zhuang</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="#work">設計案例</a>
+                    <a class="nav-item nav-link" href="as2-2_aboutMe.html">關於我</a>
+                    <a class="nav-item nav-link" href="#">聯絡我</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container homepage info" style="margin-top:18vh;">
+            <img src="asset/photo_homepage.png" class="rounded mx-auto d-block img-fluid" alt="my photo" width="200vh">
+            <h3 class="name">Lena Zhuang 🫧</h3>
+            <h4 class="school">NTU</h4>
+            <h5 class="position">UIUX Designer ｜ Graphic Designer ｜ Product Designer</h5>
+            <img src="asset/dot.png" class="rounded mx-auto d-block img-fluid" alt="dot" width="100vh">
+            <!-- <div class="dot">
+                <h6 class="dot1">●</h6>
+                <h6 class="dot2">●</h6>
+                <h6 class="dot3">●</h6>
+            </div> -->
+        </div>
+
+        <div id="work">
+            <div class="row">
+            <div class="card-group">
+                
+                    <div class="col-6">
+                        <div class="card shadow-lg">
+                            <img src="asset/Banner（Meloop）.png" class="card-img-top img-fluid" alt="work">
+                            <div class="card-body">
+                                <h5 class="card-title">Me loop：實習作品</h5>
+                                <p class="card-text">在遊戲過程中提升自我的交友社群</p>
+                                <span class="d-none d-sm-inline">
+                                    <ul class="mytag">
+                                        <li class="tag">介面優化</li>
+                                        <li class="tag">視覺設計</li>
+                                        <li class="tag">使用者體驗</li>
+                                    </ul>
+                                </span>
+                            </div>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <a href="as2-2_TRACHA.html">
+                            <div class="card shadow-lg">
+                                <img src="asset/Banner（TRACHA）.png" class="card-img-top img-fluid" alt="work">
+                                <div class="card-body">
+                                    <h5 class="card-title">TRACHA：自在茶旅</h5>
+                                    <p class="card-text">透過篩選器，媒合心目中的茶葉景點
+                                    </p>
+                                    <span class="d-none d-sm-inline">
+                                        <ul class="mytag">
+                                            <li class="tag">使用者介面</li>
+                                            <li class="tag">使用者體驗</li>
+                                            <li class="tag">MVP製作</li>
+                                        </ul>
+                                    </span>
+                                </div>
+
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="as2-2_Dayski.html">
+                            <div class="card shadow-lg">
+                                <img src="asset/Banner（Dayski）.PNG" class="card-img-top" alt="work">
+                                <div class="card-body">
+                                    <h5 class="card-title">DaySki：情侶專屬</h5>
+                                    <p class="card-text">讓情侶進行價值觀交流的暖心Line Bot</p>
+                                    <span class="d-none d-sm-inline">
+                                        <ul class="mytag">
+                                            <li class="tag">使用者介面</li>
+                                            <li class="tag">使用者體驗</li>
+                                            <li class="tag">角色設計</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                        </a>
+                    </div>
+                    <div class="col-6">
+                        <a href="as2-2_Care.html">
+                            <div class="card shadow-lg">
+                                <img src="asset/Banner（心晴）.png" class="card-img-top" alt="work">
+                                <div class="card-body">
+                                    <h5 class="card-title">心晴照護：照顧者的暖心歸屬</h5>
+                                    <p class="card-text">針對失智症照護者的設計</p>
+                                    <span class="d-none d-sm-inline">
+                                        <ul class="mytag">
+                                            <li class="tag">使用者介面</li>
+                                            <li class="tag">使用者體驗</li>
+                                            <li class="tag">原型設計</li>
+                                        </ul>
+                                    </span>
+                                </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- <div class="col-lg-6">
+            <a href="">
+                <div class="card shadow-lg">
+                    <img src="asset/redesign.jpg" class="card-img-top" alt="work">
+                    <div class="card-body">
+                        <h5 class="card-title">Graphic Designe</h5>
+                        <p class="card-text">平面設計呈現區</p>
+                        <ul class="mytag">
+                            <li class="tag">實習作品</li>
+                            <li class="tag">展覽設計</li>
+                            <li class="tag">課堂作品</li>
+                        </ul>
+                    </div>
+            </a>
+    </div> -->
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <footer class="text-center text-white" style="background-color: #000000;">
+
+        <div class="container p-4"></div>
+
+        <div class="text-center" style="background-color: rgb(0, 0, 0); margin-top: 4vh; font-size: large;">
+            Email: zzhuang024@gmail.com
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgb(0, 0, 0); margin-top: 4vh;font-size: small;">
+            © 2022 Copyright:Lena Zhuang
+        </div>
+
+    </footer>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+    </script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.1/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+    <!-- <script>
+        $(window).on('resize', function () {
+            var winw = $(window).width();
+            console.log(winw);
+            $("#winwidth").html(winw);
+        }); -->
+    <!-- </script> -->
+</body>
+
+</html>
