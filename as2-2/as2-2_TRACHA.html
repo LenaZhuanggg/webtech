@@ -18,6 +18,12 @@
 <body>
 
     <style>
+        .wrapper {
+            margin: auto;
+            width: 1200px;
+        }
+
+
         .navbar {
             background-color: rgb(255, 255, 255);
             margin-top: 4vh;
@@ -37,12 +43,16 @@
             font-weight: 700;
         }
 
-        .nav-item {
-            margin-right: 2vh;
-        }
+         .nav-item {
+            margin-left: 4vh;
+        } 
 
-        .navbar-nav {
+        /* .navbar-nav {
             float: right;
+        } */
+
+        .navbar-toggler {
+            border: none;
         }
 
         .img-fluid {
@@ -63,15 +73,23 @@
     <div id="wrapper">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="as2-2.html">Lena Zhuang</a>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="./as2-2.html#work">設計案例</a>
-                    <a class="nav-item nav-link" href="as2-2_aboutMe.html">關於我</a>
-                    <a class="nav-item nav-link" href="#">聯絡我</a>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="as2-2.html">Lena Zhuang</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <li class="nav-item"><a class="nav-link" href="./as2-2.html#work">設計案例</a></li>
+                        <li class="nav-item"><a class="nav-link" href="as2-2_aboutMe.html">關於我</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">聯絡我</a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>
+        </nav> 
 
         <h3 class="name">TRACHA 🌱</h3>
 
