@@ -1,0 +1,134 @@
+        
+.wrapper {
+    margin: auto;
+    width: 1200px;
+}
+
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    margin-top: 4vh;
+    border-radius: 32px;
+    margin-left: 10vh;
+    margin-right: 10vh;
+    box-shadow:
+        -10px 0 10px 3px rgba(232, 232, 232, 0.5),
+        10px 0 10px 3px rgba(232, 232, 232, 0.5),
+        0 10px 10px 3px rgba(232, 232, 232, 0.5),
+        0 -10px 10px 3px rgba(232, 232, 232, 0.5);
+}
+
+.navbar-brand {
+    margin-left: 2vh;
+    color: #21081a;
+    font-weight: 700;
+}
+
+ .nav-item {
+    margin-left: 2vh;
+} 
+
+/* .navbar-nav {
+    float: right;
+} */
+
+.navbar-toggler {
+    border: none;
+}
+
+.name {
+    color: black;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+.school,
+.position {
+    color: rgb(105, 99, 99);
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+#work {
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin: 5vh;
+    transition: transform .5s;
+}
+
+.card:hover {
+    /* border: #676566 solid 0.2vh; */
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: auto;
+    max-width: 100%;
+}
+
+.card-body {
+    height: 20vh;
+}
+
+.card-group {
+    /* margin-left: 8vh;
+    margin-right: 8vh; */
+    margin-top: 8vh;
+}
+
+.card-text {
+    color: rgb(73, 68, 68);
+}
+
+.card-title {
+    color: black;
+    font-weight: 600;
+}
+
+.tag {
+    border-radius: 16px;
+    padding: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 77, 82);
+    display: inline-block;
+    margin: 5px;
+    font-size: small;
+}
+
+.mytag {
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dot1,
+.dot2,
+.dot3 {
+    text-align: center;
+    color: #524f51c1;
+}
+
+.dot2 {
+    color: #686767bb;
+}
+
+.dot3 {
+    color: #848383b6;
+}
+
+.dot {
+    margin-top: 6vh;
+}
