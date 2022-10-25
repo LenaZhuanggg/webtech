@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+
+    <style>
+        #video {
+            position: fixed;
+            z-index: -1;
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .cover {
+            width: 100vw;
+            height: 100vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <video id="video" src="https://web.cw.com.tw/climate-2020/landing/cover.mp4";></video>
+    </div>
+
+    <div class="cover" style="height: 500vh;background-color: rgba(73, 78, 76, 0.503);">
+        <div style="position:absolute;top:20vh;left:20vh;height: 50vh;width: 20vw;background-color: white;">
+            <h1><span>sentence</span></h1>
+        </div>
+    </div>
+
+    <div class="cover" style="height: 500vh;background-color: rgba(53, 128, 98, 0.503);">
+        <div style="position:relative;top:20vh;left:20vh;height: 50vh;width: 20vw;background-color: white;">
+            <h1><span>sentence2</span></h1>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var max_scroll = $(document).height() - $(window).height();
+            $(window).scroll(function (e) {
+                var current_pos = $(document).scrollTop();
+                var video = $("#video").get(0);
+                var videoLength = video.duration;
+                video.currentTime = current_pos / max_scroll * videoLength;
+            });
+        });
+    </script>
+</body>
+
+</html>

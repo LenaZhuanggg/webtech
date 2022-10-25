@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        .title {
+            color: aliceblue;
+            font-weight: 300;
+            text-align: center;
+            padding-top: 50vh;
+
+        }
+        
+        #sbanner2 {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        #wideobj {
+            background-image: url("asset/about-img.jpg");
+            position: absolute;
+            height: 100vh;
+            left: 0px;
+            width: 1000vw;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="background-color: rgb(21, 21, 33);height: 100vh;">
+        <h4 class="title">『我想跟你一起浪費時間』</h4>
+    </div>
+    <div id="v1frame" style="height:500vh;">
+        <div class="sticky-top">
+            <video id="video1" src="https://ume890714.github.io/final_project/heading.mp4"
+                style="width:100vw;height: 100vh;"></video>
+        </div>
+    </div>
+
+    <div id="banner2" class="sticky-top" style="background-color:  rgb(21, 21, 33);height: 300vh;">
+        <h4 class="title">📻探討你喜歡的音樂的細枝末節</h4>
+    </div>
+
+    <div id="v2frame" style="height:500vh;">
+        <div class="sticky-top">
+            <video id="video2" src="https://ume890714.github.io/final_project/turning.mp4"
+                style="width:100vw;height: 100vh;"></video>
+        </div>
+    </div>
+   
+    <div style="height:1000vh;">
+        <div class="sticky-top">
+            <div id="wideobj"></div>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(21, 21, 33);height: 100vh;"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var video1_pos = $("#video1").offset().top;
+            var video1_end = video1_pos + $("#v1frame").height() - $(window).height();
+            var video2_pos = $("#video2").offset().top;
+            var video2_end = video2_pos + $("#v2frame").height() - $(window).height();
+
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                if (current_pos > video1_pos && current_pos < video1_end) {
+                    $("#video1")[0].play();
+                } else {
+                    $("#video1")[0].pause();
+                }
+                var current_pos = $(window).scrollTop();
+                if (current_pos > video2_pos && current_pos < video2_end) {
+                    $("#video2")[0].play();
+                } else {
+                    $("#video2")[0].pause();
+                }
+            });
+        });
+
+        $(function () {
+            var doch = $(document).height();
+            var winw = $(window).width();
+            var winh = $(window).height();
+            var max_scroll = doch - winh;
+            var max_move = $("#wideobj").width()-winw;
+
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                var new_left = current_pos / max_scroll * max_move *(-1);
+                $("#wideobj").css("left", new_left);
+            });
+        });
+
+        $(function () {
+            var doch = $(document).height();
+            var winw = $(window).width();
+            var winh = $(window).height();
+            var max_scroll = doch - winh;
+            var max_move = $("#wideobj").width()-winw;
+
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                var new_left = current_pos / max_scroll * max_move *(-1);
+                $("#wideobj").css("left", new_left);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
