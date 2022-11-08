@@ -13,15 +13,8 @@
     <title>as6:video contral</title>
 
     <style>
-        #video1 {
+        #video {
             position: fixed;
-            z-index: -1;
-            object-fit: cover;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        #video2 {
             z-index: -1;
             object-fit: cover;
             width: 100vw;
@@ -72,7 +65,7 @@
 
 <body>
     <div>
-        <video id="video1"
+        <video id="video"
             src="https://static.videezy.com/system/resources/previews/000/004/203/original/Shopping_at_a_street_market.mp4"
             ;></video>
     </div>
@@ -84,9 +77,9 @@
         </div>
     </div>
 
-    <div class="cover" style="height: 100vh;background-color: rgba(51, 64, 59, 0.848);">
+    <div class="cover" style="height:500vh;background-color: rgba(24, 27, 26, 0.848);">
         <div
-            style="position:absolute;height: 20vh;width: 50vw;background-color: rgba(255, 255, 255, 0.236);border-radius: 16px;">
+            style="position:absolute;height: 20vh;width: 50vw;background-color: rgba(38, 38, 38, 0.236);border-radius: 16px;">
             <h5><span>2020年1月21日 中央流行疫情指揮中心宣布臺灣確診首例境外移入個案</span></h5>
         </div>
     </div>
@@ -102,6 +95,9 @@
         <img src="asset/covid-cells.jpg" alt="" width="100%">
         <div class="words">2021年4月20日 本土疫情大規模爆發</div>
     </div>
+
+  
+  
 
 
 
@@ -128,6 +124,7 @@
                 video.currentTime = current_pos / max_scroll * videoLength;
             });
         });
+
     </script>
 </body>
 
