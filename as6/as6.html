@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>as6:video contral</title>
+
+    <style>
+        #video1 {
+            position: fixed;
+            z-index: -1;
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #video2 {
+            z-index: -1;
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .cover {
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h4 {
+            text-align: center;
+            margin-top: 8vh;
+            color: rgb(255, 255, 255);
+        }
+
+        h5 {
+            text-align: center;
+            margin-top: 8vh;
+            color: rgb(255, 255, 255);
+        }
+
+        .pic1 {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .words {
+            font-size: 25px;
+            letter-spacing: 10px;
+            position: absolute;
+            top: 30%;
+            left: 5%;
+            color: rgb(255, 255, 255);
+        }
+
+        .imgcovid {
+            position: relative;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <video id="video1"
+            src="https://static.videezy.com/system/resources/previews/000/004/203/original/Shopping_at_a_street_market.mp4"
+            ;></video>
+    </div>
+
+    <div class="cover" style="height: 500vh;background-color: rgba(73, 78, 76, 0.503);">
+        <div
+            style="position:absolute;height: 20vh;width: 50vw;background-color: rgba(255, 255, 255, 0.236);border-radius: 16px;">
+            <h4><span>2019年12月 中國武漢華南海鮮市場陸續出現不明肺炎病例</span></h4>
+        </div>
+    </div>
+
+    <div class="cover" style="height: 100vh;background-color: rgba(51, 64, 59, 0.848);">
+        <div
+            style="position:absolute;height: 20vh;width: 50vw;background-color: rgba(255, 255, 255, 0.236);border-radius: 16px;">
+            <h5><span>2020年1月21日 中央流行疫情指揮中心宣布臺灣確診首例境外移入個案</span></h5>
+        </div>
+    </div>
+
+    <!-- <div class="covid" style="position:relative;width:100px;height:100px;">
+        <img  class="pic1" src="asset/covid-cells.jpg">
+        <div class="covid_text" style="position:absolute;width:100px;height:100px;">
+            2021年4月20日 中華航空發生機師確診案例 本土疫情大規模爆發
+            </div>
+    </div> -->
+
+    <div class="imgcovid">
+        <img src="asset/covid-cells.jpg" alt="" width="100%">
+        <div class="words">2021年4月20日 本土疫情大規模爆發</div>
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var max_scroll = $(document).height() - $(window).height();
+            $(window).scroll(function (e) {
+                var current_pos = $(document).scrollTop();
+                var video = $("#video").get(0);
+                var videoLength = video.duration;
+                video.currentTime = current_pos / max_scroll * videoLength;
+            });
+        });
+    </script>
+</body>
+
+</html>
