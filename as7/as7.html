@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>as7</title>
+    <style>
+        #wideobj {
+            position: absolute;
+            height: 100vh;
+            left: 0px;
+            width: 1000vw;
+            background-image: url("https://static01.nyt.com/newsgraphics/2016/07/14/france-attack-scroller/9ec6dcec7e22fffa81a21fb790ba566f2c6aee83/base-big.jpg");
+
+        }
+
+        #section1bg {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-1.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        #section2bg {
+            background-image: url("https://p4css.github.io/webScroll/assets/taipei-2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="height:50vh;background-color: rgb(16, 98, 185);"></div>
+    <div style="height:1000vh;">
+        <div class="sticky-top">
+            <div id="wideobj"></div>
+        </div>
+    </div>
+    <div style="height:100vh;background-color: rgb(186, 185, 185);"></div>
+
+    <div style="background-color: grey;height:50vh"></div>
+
+
+    <div style="height:100vh;background-color: rgb(215, 218, 250);"></div>
+    <div style="height:500vh;">
+        <div id="section1bg" class="sticky-top"></div>
+    </div>
+    <div style="height:100vh;background-color: rgb(87, 88, 90);"></div>
+    <div style="height:200vh;;">
+        <div id="section2bg" class="sticky-top"></div>
+    </div>
+    <div style="height:100vh;background-color: rgb(87, 88, 90);"></div>
+
+
+    <div style="background-color: rgb(24, 24, 141);height: 100vh;"></div>
+    <div id="v1frame" style="height:1000vh;">
+        <div class="sticky-top">
+            <video id="video1" src="https://web.cw.com.tw/climate-2020/deforestation/cover.mp4"
+                style="width:100vw;"></video>
+        </div>
+    </div>
+    <div id="v2frame" style="height:1000vh;">
+        <div class="sticky-top">
+            <video id="video2" src="https://web.cw.com.tw/climate-2020/landing/cover.mp4"
+                style="width:100vw;"></video>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(21, 21, 33);height: 100vh;"></div>
+
+
+    
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script>
+    
+        $(function () {
+            var doch = $(document).height();
+            var winw = $(window).width();
+            var winh = $(window).height();
+            var max_scroll = doch - winh;
+            var max_move = $("#wideobj").width()-winw;
+
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                var new_left = current_pos / max_scroll * max_move *(-1);
+                $("#wideobj").css("left", new_left);
+            });
+        });
+
+        $(function(){
+            var video1_pos = $("#video1").offset().top;
+            var video1_end = video1_pos + $("#v1frame").height() - $(window).height();
+            var video2_pos = $("#video2").offset().top;
+            var video2_end = video2_pos + $("#v2frame").height() - $(window).height();
+
+            $(window).scroll(function(){
+                var current_pos = $(window).scrollTop();
+                if(current_pos>video1_pos && current_pos <video1_end){
+                    $("#video1")[0].play();
+                }else{
+                    $("#video1")[0].pause();
+                }
+                var current_pos = $(window).scrollTop();
+                if(current_pos>video2_pos && current_pos <video2_end){
+                    $("#video2")[0].play();
+                }else{
+                    $("#video2")[0].pause();
+                }
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
