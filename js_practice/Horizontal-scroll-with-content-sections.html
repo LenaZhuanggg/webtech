@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Progress bar</title>
+    <style>
+        #wideobj {
+            position: absolute;
+            height: 100vh;
+            left: 0px;
+            width: 1000vw;
+            background-image: url("https://static01.nyt.com/newsgraphics/2016/07/14/france-attack-scroller/9ec6dcec7e22fffa81a21fb790ba566f2c6aee83/base-big.jpg");
+            background: linear-gradient(90deg,rgba(0,0,0,0.5),rgba(255,255,255,1)100%);
+
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div style="height:50vh;background-color: rgb(16, 98, 185);"></div>
+    <div style="height:1000vh;">
+        <div class="sticky-top">
+            <div id="wideobj"></div>
+        </div>
+    </div>
+    <div style="height:100vh;background-color: rgb(186, 185, 185);"></div>
+
+    <div style="background-color: grey;height:50vh"></div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script>
+        $(function () {
+            var doch = $(document).height();
+            var winw = $(window).width();
+            var winh = $(window).height();
+            var max_scroll = doch - winh;
+            var max_move = $("#wideobj").width()-winw;
+
+            $(window).scroll(function () {
+                var current_pos = $(window).scrollTop();
+                var new_left = current_pos / max_scroll * max_move *(-1);
+                $("#wideobj").css("left", new_left);
+            });
+        });
+    </script>
+</body>
+
+</html>
